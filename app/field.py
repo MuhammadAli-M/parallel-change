@@ -13,7 +13,7 @@ class ShoppingCart:
     def __init__(self):
         self.prices = []
 
-    def add(self, price):
+    def add(self, *price):
         self.prices = [price] if isinstance(price, int) else price
 
     def calculate_total_price(self):

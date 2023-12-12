@@ -32,11 +32,16 @@ class ShoppingCartTests(unittest.TestCase):
         shoppingCart.add(100)
         self.assertTrue(shoppingCart.has_discount())
 
+
     def test_doesnt_have_discount_when_all_its_items_are_cheap(self):
         shoppingCart = field.ShoppingCart()
         shoppingCart.add(10)
         self.assertFalse(shoppingCart.has_discount())
 
+    def test_cart_may_have_two_items(self):
+        shoppingCart = field.ShoppingCart()
+        shoppingCart.add(10, 20)
+        self.assertEqual(2, shoppingCart.number_of_products())
 
 if __name__ == "__main__":
     unittest.main()
