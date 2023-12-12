@@ -11,6 +11,9 @@ class ShoppingCart:
         self.prices = []
     '''
 
+    def __init__(self):
+        self.prices = []
+
     def add(self, price):
         self.price = functools.reduce(operator.add, [price])
 
