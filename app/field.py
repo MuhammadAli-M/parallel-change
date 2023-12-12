@@ -14,7 +14,7 @@ class ShoppingCart:
         self.prices = []
 
     def add(self, price):
-        self.prices = [price]
+        self.prices = [price] if isinstance(price, int) else price
 
     def calculate_total_price(self):
         return functools.reduce(operator.add, self.prices)
