@@ -12,7 +12,7 @@ class ShoppingCart:
     '''
 
     def add(self, price):
-        self.price = price
+        self.price = functools.reduce(operator.add, [price])
 
     def calculate_total_price(self):
         return functools.reduce(operator.add, [self.price])
