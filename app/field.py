@@ -19,16 +19,13 @@ class ShoppingCart:
         self.price = functools.reduce(operator.add, self.prices)
 
     def calculate_total_price(self):
-        return functools.reduce(operator.add, self.get_prices_list())
-
-    def get_prices_list(self):
-        return self.prices
+        return functools.reduce(operator.add, self.prices)
 
     def has_discount(self):
-        return any(filter(lambda price: price >= 100, self.get_prices_list()))
+        return any(filter(lambda price: price >= 100, self.prices))
 
     def number_of_products(self):
-        return len(self.get_prices_list())
+        return len(self.prices)
 
 
 class SomeConsumer():
