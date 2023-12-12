@@ -3,7 +3,7 @@ import operator
 
 
 class ShoppingCart:
-    price = 0
+    price = functools.reduce(operator.add, [0])
 
     '''
     the goal is to remove the field above, using a list of prices instead:
