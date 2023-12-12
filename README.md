@@ -5,7 +5,8 @@ It aims to practice refactoring.
 
 # Project Layout
 
-TBD
+`app` directory src code
+`tests` directory for test files
 
 ## Installation
 
