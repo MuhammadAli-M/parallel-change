@@ -1,3 +1,7 @@
+import functools
+import operator
+
+
 class ShoppingCart:
     price = 0
 
@@ -11,7 +15,7 @@ class ShoppingCart:
         self.price = price
 
     def calculate_total_price(self):
-        return self.price
+        return functools.reduce(operator.add, [self.price])
 
     def has_discount(self):
         return any(filter(lambda price: price >= 100, [self.price]))
