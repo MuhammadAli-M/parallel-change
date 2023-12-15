@@ -23,7 +23,7 @@ class ShoppingCart:
         return functools.reduce(operator.add, self.prices)
 
     def has_discount(self):
-        return any(filter(lambda price: price >= 100, self.prices))
+        return any(price >= 100 for price in self.prices)
 
     def number_of_products(self):
         return len(self.prices)
